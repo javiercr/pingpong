@@ -1,0 +1,23 @@
+= Ping Pong Elo ranking
+
+At {Diacode}[http://diacode.com], we play ping pong every day (using the same table that we use for 
+our meetings) and we play hard, so we decided to make a ranking with our scores.
+
+We were wondering which would be the more reliable way to find who was the
+best player. After a few Google search we found the 
+{Elo Rating System}[http://en.wikipedia.org/wiki/Elo_rating_system], which 
+is often used on Chess tournaments and seems to be pretty fair.
+
+Then we found the {Elo gem made by Iain Hecker}[https://github.com/iain/elo/blob/master/README.rdoc].
+This gem is perfect, but it doesn't save players and games to the database. So instead usinng this gem
+directly, we took the code and we modified it to transform Game and Player to normal Rails models with ActiveRecord.
+
+== Installation
+* Clone the project.
+* Write a config/database.yml with your DB settings for development, production and test enviroments.
+* Run the app or deploy it as you would do with any other Rails project
+* If you need help drop us a line *hablamos at diacode dot com* 
+
+== Copyright
+* Implementatión of the Elo Algorithm is made by Iain Hecker under MIT License.
+* The logo for the app is made by {Teö}[http://ilusteo.blogspot.com/] exclusively for {Diacode}[http://diacode.com].

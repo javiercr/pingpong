@@ -2,7 +2,7 @@
 	<div class="header"></div>
 	
 	<div class="grid_1 avatar alpha"><img src="<%= @player.avatar %>" height="60"/></div>
-	<div class="grid_5 name omega"><%= @player.name %></div>
+	<div class="grid_5 name omega">@<%= @player.name %></div>
 	
 	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
   <script type="text/javascript">
@@ -54,7 +54,7 @@
 			<div class="grid_4 alpha game_player loser">
 			<% end %>
 				<div class="grid_1 avatar alpha"><img src="<%= game.player_one.avatar %>" height="60"/></div>
-				<div class="grid_3 name omega"><%= game.player_one.name %></div>
+				<div class="grid_3 name omega"><%= "@"+game.player_one.name %></div>
 			</div>
 
 
@@ -64,7 +64,7 @@
 			<% else %>
 			<div class="grid_4 omega game_player two loser">
 			<% end %>
-				<div class="grid_3 name alpha"><%= game.player_two.name %></div>
+				<div class="grid_3 name alpha"><%= "@"+game.player_two.name %></div>
 				<div class="grid_1 avatar omega"><img src="<%= game.player_two.avatar %>" height="60"/></div>
 			</div>
 

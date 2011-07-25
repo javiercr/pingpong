@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-  before_filter :check_password, :only => [:create, :new, :edit, :update, :destroy]
+  before_filter :check_password, :only => [:create, :update, :destroy]
   
   
   # GET /players

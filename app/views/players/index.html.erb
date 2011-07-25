@@ -8,7 +8,7 @@
 		<div class="player">
 			<div class="grid_1 alpha"><div class="rank rank_<%= index+1 %>"></div></div>
 			<div class="grid_1 avatar"><img src="<%= player.avatar %>" height="60" title="Points: <%= player.rating %> "/></div>
-			<div class="grid_4 name" title="Points: <%= player.rating %> "><%= link_to player.name, player %></div>
+			<div class="grid_4 name" title="Points: <%= player.rating %> "><%= link_to "@"+player.name, player %></div>
 			<div class="grid_2 omega stats">
 				matches: <%= player.games.size %><br/>
 				victories: <%= player.victories.size %><br/>
@@ -35,7 +35,7 @@
 			<div class="grid_4 alpha game_player loser">
 			<% end %>
 				<div class="grid_1 avatar alpha"><img src="<%= game.player_one.avatar %>" height="60"/></div>
-				<div class="grid_3 name omega"><%= link_to game.player_one.name, game.player_one %></div>
+				<div class="grid_3 name omega"><%= link_to "@"+game.player_one.name, game.player_one %></div>
 			</div>
 
 
@@ -45,7 +45,7 @@
 			<% else %>
 			<div class="grid_4 omega game_player two loser">
 			<% end %>
-				<div class="grid_3 name alpha"><%= link_to game.player_two.name, game.player_two %></div>
+				<div class="grid_3 name alpha"><%= link_to "@"+game.player_two.name, game.player_two %></div>
 				<div class="grid_1 avatar omega"><img src="<%= game.player_two.avatar %>" height="60"/></div>
 			</div>
 			
