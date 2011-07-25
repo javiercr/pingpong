@@ -9,7 +9,7 @@ gem 'sqlite3'
 
 
 group :production, :jose do
-  gem 'mysql2', '0.2.7'
+  gem 'mysql2'
 end
 
 

@@ -28,7 +28,7 @@ class GamesController < ApplicationController
   # GET /games/new.xml
   def new
     @game = Game.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @game }
@@ -44,7 +44,8 @@ class GamesController < ApplicationController
   # POST /games.xml
   def create
     @game = Game.new(params[:game])
-
+    @game.calculate
+    
     respond_to do |format|
       if @game.save
         format.html { redirect_to(@game, :notice => 'Game was successfully created.') }
