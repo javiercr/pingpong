@@ -1,2 +1,4 @@
 .DS_Store
 ./vendor/cache/*
+config/database.yml
+config/deploy.rb
