@@ -180,3 +180,19 @@ body {
   height: 48px;
   margin: 20px auto;
 }
+
+
+#footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  float: left;
+  clear: both;
+}
+
+#footer a, #footer a:visited{
+  color: white;
+  text-decoration: underline;
+}
