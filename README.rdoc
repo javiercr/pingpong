@@ -9,7 +9,7 @@ best player. After a few Google search we found the
 is often used on Chess tournaments and seems to be pretty fair.
 
 Then we found the {Elo gem made by Iain Hecker}[https://github.com/iain/elo/blob/master/README.rdoc].
-This gem is perfect, but it doesn't save players and games to the database. So instead usinng this gem
+This gem is perfect, but it doesn't save players and games to the database. So instead using this gem
 directly, we took the code and we modified it to transform Game and Player to normal Rails models with ActiveRecord.
 
 == Installation
