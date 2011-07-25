@@ -1,4 +1,4 @@
-= Ping Pong Elo ranking
+= Ping Pong ranking using Elo Algorithm
 
 At {Diacode}[http://diacode.com], we play ping pong every day (using the same table that we use for 
 our meetings) and we play hard, so we decided to make a ranking with our scores.
