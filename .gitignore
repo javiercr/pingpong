@@ -6,3 +6,4 @@ config/database.yml
 config/deploy.rb
 db/*.sqlite3
 .bundle/config
+config/setup_loads_paths.rb
