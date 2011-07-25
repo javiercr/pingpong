@@ -1,0 +1,8 @@
+development:
+  master_password: '1234'
+
+test:
+  master_password: '1234'
+
+production:
+  master_password: '1234'

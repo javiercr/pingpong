@@ -1,0 +1,34 @@
+
+<div id="last_matches" class="grid_8 prefix_2 suffix_2">
+	<div class="header"></div>
+	
+	<% @games.each_with_index do |game, index| %>
+		<div class="match" title="Played: <%= game.created_at %>">
+			<div class="versus">&nbsp;</div>
+			
+			<% if game.result > 0.5 %>
+			<div class="grid_4 alpha game_player">
+				<div class="winner">&nbsp;</div>
+			<% else %>
+			<div class="grid_4 alpha game_player loser">
+			<% end %>
+				<div class="grid_1 avatar alpha"><img src="<%= game.player_one.avatar %>" height="60"/></div>
+				<div class="grid_3 name omega"><%= link_to game.player_one.name, game.player_one %></div>
+			</div>
+
+
+			<% if game.result < 0.5 %>
+			<div class="grid_4 omega game_player two">
+				<div class="winner">&nbsp;</div>
+			<% else %>
+			<div class="grid_4 omega game_player two loser">
+			<% end %>
+				<div class="grid_3 name alpha"><%= link_to game.player_two.name, game.player_two %></div>
+				<div class="grid_1 avatar omega"><img src="<%= game.player_two.avatar %>" height="60"/></div>
+			</div>
+			
+		</div>
+	<% end %>
+
+
+</div>

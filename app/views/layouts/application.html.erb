@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pingpong</title>
+	<%= stylesheet_link_tag 'reset', 'text', '960_12_col', 'application' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="wrapper" class="container_12">
+	<div id="header" class="grid_12">
+		<a href="/" id="logo"></a>
+		<div id="info_text"></div>
+	</div>
+	<%= yield %>
+</div>
+</body>
+</html>

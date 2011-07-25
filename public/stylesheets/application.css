@@ -1,0 +1,182 @@
+body {
+  background: url('../images/bg.jpg') repeat;
+  color: white;
+}
+
+#header {
+  position: relative;
+}
+
+#logo {
+  cursor: pointer;
+  display: block;
+  background: url('../images/logo.png') no-repeat top left;
+  width: 576px;
+  height: 482px;
+  margin: 0 auto;
+}
+
+#info_text {
+  background: url('../images/info_text.png') no-repeat scroll top left;
+  width: 300px;
+  height: 140px;
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+}
+.line {
+  background: url('../images/line.png') no-repeat scroll top left;
+  width: 621px;
+  height: 1px;
+}
+
+#arrow {
+  background: url('../images/arrow.png') no-repeat scroll top left;
+  width: 335px;
+  height: 210px;
+}
+
+.winner {
+  background: url('../images/winner.png') no-repeat scroll top left;
+  width: 79px;
+  height: 19px;
+  position: absolute;
+  left: 80px;
+  bottom: 0px;
+}
+
+.two .winner {
+  right: 80px;
+  left: auto;
+}
+
+.versus {
+  background: url('../images/vs.png') no-repeat scroll top left;
+  width: 52px;
+  height: 31px;
+  position: absolute;
+  left: 50%;
+  margin-left: -26px;
+  margin-top: 13px;
+}
+
+
+#ranking .header {
+  background: url('../images/ranking.png') no-repeat scroll top left;
+  width: 300px;
+  height: 48px;
+  margin: 20px auto;
+}
+
+.rank {
+  width: 49px;
+  height: 57px;
+  margin: auto auto;
+}
+.rank_9 {
+  background: url('../images/rank_9.png') no-repeat scroll top left;
+} 
+.rank_8 {
+  background: url('../images/rank_8.png') no-repeat scroll top left;
+} 
+.rank_7 {
+  background: url('../images/rank_7.png') no-repeat scroll top left;
+} 
+.rank_6 {
+  background: url('../images/rank_6.png') no-repeat scroll top left;
+} 
+.rank_5 {
+  background: url('../images/rank_5.png') no-repeat scroll top left;
+} 
+.rank_4 {
+  background: url('../images/rank_4.png') no-repeat scroll top left;
+} 
+.rank_3 {
+  background: url('../images/rank_3.png') no-repeat scroll top left;
+} 
+.rank_2 {
+  background: url('../images/rank_2.png') no-repeat scroll top left;
+}  
+.rank_1 {
+  background: url('../images/rank_1.png') no-repeat scroll top left;
+}
+
+.player, .match {
+  clear: both;
+  margin: 20px 0;
+  float: left;
+  height: 60px;
+  vertical-align: middle;
+  position:relative;
+}
+
+.name {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 41px;
+}
+
+.name a, .name a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.name a:hover {
+  color: #ccc;
+}
+
+.stats {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: right;
+}
+
+#last_matches, #match_history {
+  margin-top: 40px;
+}
+
+#last_matches .header {
+  background: url('../images/last_matches.png') no-repeat scroll top left;
+  width: 461px;
+  height: 45px;
+  margin: 20px auto;
+}
+
+.game_player.loser {
+  opacity: 0.3;
+}
+
+.game_player .name {
+  font-size: 31px;
+}
+
+.game_player.two .name {
+  text-align: right;
+}
+
+
+#player_stats .header {
+  background: url('../images/player_stats.png') no-repeat scroll top left;
+  width: 460px;
+  height: 46px;
+  margin: 20px auto;
+}
+
+
+#player_stats .name {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+#chart {
+  opacity: 0.6;
+}
+
+
+#match_history .header {
+  background: url('../images/match_history.png') no-repeat scroll top left;
+  width: 540px;
+  height: 48px;
+  margin: 20px auto;
+}

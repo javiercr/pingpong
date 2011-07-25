@@ -1,0 +1,75 @@
+<div id="player_stats" class="grid_6 prefix_3 suffix_3">
+	<div class="header"></div>
+	
+	<div class="grid_1 avatar alpha"><img src="<%= @player.avatar %>" height="60"/></div>
+	<div class="grid_5 name omega"><%= @player.name %></div>
+	
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load('visualization', '1', {packages: ['corechart']});
+  </script>
+  <script type="text/javascript">
+    function drawVisualization() {
+      // Create and populate the data table.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Matches');
+      data.addColumn('number', 'Number');
+      data.addRows(2);
+      data.setValue(0, 0, 'Won');
+      data.setValue(0, 1, <%=@player.victories.size%>);
+      data.setValue(1, 0, 'Lost');
+      data.setValue(1, 1, <%=@player.defeats.size%>);
+    
+      // Create and draw the visualization.
+      new google.visualization.PieChart(document.getElementById('chart')).
+          draw(data, {
+						backgroundColor: 'transparent', 
+						colors: ['#0A4F68', '#A01D13'],
+						fontName: "Helvetica Neue",
+						legend: 'none',
+						title: 'Points: <%=@player.rating%>',
+						titleTextStyle: {color: 'white', fontSize: 16, fontName: "Helvetica Neue"},
+						height: 400,
+						chartArea: {top: 40, width:"100%", height:"100%"}});
+    }
+
+    google.setOnLoadCallback(drawVisualization);
+  </script>
+	<div id="chart" ></div>
+	
+</div>
+
+
+<div id="match_history" class="grid_8 prefix_2 suffix_2">
+	<div class="header"></div>
+
+	<% @player.games.each_with_index do |game, index| %>
+		<div class="match" title="Played: <%= game.created_at %>">
+			<div class="versus">&nbsp;</div>
+
+			<% if game.result > 0.5 %>
+			<div class="grid_4 alpha game_player">
+				<div class="winner">&nbsp;</div>
+			<% else %>
+			<div class="grid_4 alpha game_player loser">
+			<% end %>
+				<div class="grid_1 avatar alpha"><img src="<%= game.player_one.avatar %>" height="60"/></div>
+				<div class="grid_3 name omega"><%= game.player_one.name %></div>
+			</div>
+
+
+			<% if game.result < 0.5 %>
+			<div class="grid_4 omega game_player two">
+				<div class="winner">&nbsp;</div>
+			<% else %>
+			<div class="grid_4 omega game_player two loser">
+			<% end %>
+				<div class="grid_3 name alpha"><%= game.player_two.name %></div>
+				<div class="grid_1 avatar omega"><img src="<%= game.player_two.avatar %>" height="60"/></div>
+			</div>
+
+		</div>
+	<% end %>
+
+
+</div>
